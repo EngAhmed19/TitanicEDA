@@ -52,6 +52,7 @@ The description of the data after cleaning it.
 
 ### Survival Rate
 The analysis revealed that approximately 34% of passengers survived the disaster. A Pie chart showed the precentage of survivors and non-survivors.
+
 ![Survival Rate](images/survival_rate.png)
 
 
