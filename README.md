@@ -33,53 +33,68 @@ The `Cabin` imputed with the mode of each `Pclass`
 
 ## 4. Outlier Analysis
 ![Boxplot for outlier in fare and age](images/outlier.png)
+- Here wh have alot of outlier in fare so we removed it with IQR.
 
-## 4. Exploratory Data Analysis
+The description of the data after cleaning it.
+![Description of data](images/description.png)
+
+## 5. Feature Engineering
+- We extract here 2 new features {`Age Group`,`Family size`}
+- for `Age group`:
+  - Age 0->12: Child
+  - Age 13->18: Teenager
+  - Age 19->30: Young Adult
+  - Age 31->50: Adult
+  - Age 51->80: Senior
+- for `Family size` = `Sibsp` + `Parch` + 1
+
+## 6. Exploratory Data Analysis
 
 ### Survival Rate
-The analysis revealed that approximately 38% of passengers survived the disaster. A bar chart showed the count of survivors and non-survivors.
+The analysis revealed that approximately 34% of passengers survived the disaster. A Pie chart showed the precentage of survivors and non-survivors.
+![Survival Rate](images/survival_rate.png)
 
-![Survival Count Plot](path_to_survival_count_plot.png)
 
 ### Passenger Class
 Survival rates varied significantly across passenger classes:
-- **1st Class**: Higher survival rate.
-- **3rd Class**: Lower survival rate.
+- **1st Class**: Lower survival rate.
+- **3rd Class**: Higher survival rate.
 
 A grouped bar chart compared survival counts within each class.
 
-![Survival by Passenger Class](path_to_survival_by_class_plot.png)
+![Survival by Passenger Class](images/survived_for_each_pclass.png)
+![Survival rate by Passenger Class](images/precentage_of_survived_for_each_class.png)
 
 ### Age Distribution
-The age distribution highlighted that passengers ranged from infants to the elderly. Younger passengers (children) had a higher likelihood of survival.
+The age distribution highlighted that passengers ranged from infants to the elderly. Younger passengers (Young Adult) had a higher likelihood of survival.
 
-![Age Distribution](path_to_age_distribution_plot.png)
+![Age Distribution](images/distibution_of_age_survived.png)
 
-Boxplots depicted survival rates across different age groups.
+Pie Chart depicted survival rates across different age groups.
 
-![Survival by Age](path_to_survival_by_age_plot.png)
+![Survival by Age](images/precentage_survived_for_each_gender_group.png)
 
 ### Gender Analysis
 The analysis confirmed that females had a significantly higher survival rate compared to males.
 
-![Survival by Gender](path_to_survival_by_gender_plot.png)
+![Survival by Gender](images/percentage_survived_for_each_gender.png)
 
 ### Embarkation Port
-Passengers who embarked from different ports had varying survival rates. Those from Cherbourg (C) had the highest survival rate.
+Passengers who embarked from different ports had varying survival rates. Those from Southampton (S) had the highest survival rate.
 
-![Survival by Embarkation Port](path_to_survival_by_embarkation_plot.png)
+![Survival by Embarkation Port](images/embarked_survival_rate.png)
 
 ## 5. Correlation Analysis
-A heatmap of feature correlations revealed relationships between variables. `Pclass`, `Sex`, and `Age` were strongly correlated with survival.
+A heatmap of feature correlations revealed relationships between variables.
 
-![Correlation Heatmap](path_to_correlation_heatmap.png)
+![Correlation Heatmap](images/corrolation.png)
 
 ## 6. Insights and Observations
-- **Survival Rate**: Around 38% of passengers survived.
-- **Passenger Class**: First-class passengers had a significantly higher survival rate compared to second and third-class passengers.
+- **Survival Rate**: Around 34% of passengers survived.
+- **Passenger Class**: Third-class passengers had a significantly higher survival rate compared to second and First-class passengers.
 - **Gender**: Females had a much higher survival rate than males.
-- **Age**: Children (younger passengers) were more likely to survive.
-- **Embarked**: Passengers who embarked from port C (Cherbourg) had the highest survival rate.
+- **Age**: Young Adult (younger passengers) were more likely to survive.
+- **Embarked**: Passengers who embarked from port S (Southampton) had the highest survival rate.
 
 ## 7. Conclusion
 This EDA reveals key factors influencing survival on the Titanic. Features like passenger class, gender, and age play a critical role. These insights could guide predictive modeling and further analysis.
