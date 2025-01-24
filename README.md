@@ -32,7 +32,7 @@ The `Cabin` imputed with the mode of each `Pclass`
 ```
 
 ## 4. Outlier Analysis
-
+![Boxplot for outlier in fare and age](images/outlier.png)
 
 ## 4. Exploratory Data Analysis
 
